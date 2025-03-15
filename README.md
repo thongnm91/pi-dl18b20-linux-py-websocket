@@ -24,7 +24,7 @@ The server will then store the temperature in a database and display it on a web
 > - Check if the sensor is detected by running ***ls /sys/bus/w1/devices/***.
 > - Read temperature from sensor by running ***ls /sys/bus/w1/devices/***.
 
-![Check sensor](../img/2025-03-15_164732.jpg)
+![Check sensor](./img/2025-03-15_164732.jpg)
 
 3. Connect the DS18B20 sensor to the Raspberry Pi
 > - Datasheet: https://datasheets.maximintegrated.com/en/ds/DS18B20.pdf
