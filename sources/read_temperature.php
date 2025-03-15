@@ -33,7 +33,7 @@
                 $stmt->close();
 
                 $ins = true;
-                if ($latest !== null && abs($latest['temperature'] - $temp) < 0.1) {
+                if ($latest !== null && abs($latest['temperature'] - $temp) < 1) {
                     $ins = false;
                     #echo "No need to insert<br>";
                     

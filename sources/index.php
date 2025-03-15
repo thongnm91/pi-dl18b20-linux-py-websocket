@@ -43,7 +43,8 @@
 </head>
 <body>
     <h1>Current Temperature</h1>
-    <p id="temperature">Loading...</p>
+    <h2 id="temperature">Loading...</h2>
     <p id="counter">Next update in: 5s</p>
+    
 </body>
 </html>
