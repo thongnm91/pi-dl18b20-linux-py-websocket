@@ -1,4 +1,7 @@
-﻿# Remote Temperature Measurement
+﻿# IoT Realtime Temperature
+
+Demo: https://www.cc.puv.fi/~e2301482/projectEmbeddedLinux/index.html
+
 ## Introduction
 This project is a simple example of how to measure temperature remotely using a Raspberry Pi 3 Model B v1.2 and a DS18B20 temperature sensor. 
 The Raspberry Pi will read the temperature from the sensor and send it to a remote server using a POST request. 
@@ -11,6 +14,8 @@ The server will then store the temperature in a database and display it on a web
 - MySQL database
 - Apache web server
 - PHP programming language
+
+![Check sensor](./img/2025-03-15_224357.jpg)
 
 ## Installation
 ### Raspberry Pi setup 
@@ -78,8 +83,8 @@ CREATE TABLE temperature
 
 5. PHP script
 
-> - This script reads the temperature from the sensor and compares it with the previous value. 
-> - If the temperature has changed greater than 0.5°C, it inserts the new value into the database table "temperature".
-> - Else it updates the "date_check" field in the database table "temperature".
-> - This script is executed every 1 minute.
-> - script in source folder.
+> - Home page **index.html** will call script function **read_temperature.php** to reads the temperature from a text file **dev_ds18b20.txt** in webserver.
+> - Text file **dev_ds18b20.txt** contains the temperature value read from the sensor, which is read by the Raspberry Pi _**cat /sys/bus/w1/devices/28-00000b994082/w1_slave**_ and auto update **dev_ds18b20.txt** on webserver every 5 second.
+> - Auto update to server every 5 second by using batch file **autoRun.sh** and **updateFile.py** which running on Raspberry Pi.
+> - In **read_temperature.php** function, if the temperature has changed greater than 0.5°C, it inserts the new value into the database table "temperature".
+> - Else it updates the current time in the database table "temperature".

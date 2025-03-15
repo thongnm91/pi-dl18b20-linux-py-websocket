@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Display</title>
+    <script>
+        function fetchTemperature() {
+            fetch('read_temperature.php')
+                .then(response => response.text())
+                .then(data => {
+                    if (data.trim() === "" || data === "null") {
+                        document.getElementById('temperature').innerText = "Loading...";
+                    } else {
+                        document.getElementById('temperature').innerText = data + ' \u00B0C';
+                    }
+                    console.log(data);
+                })
+                .catch(error => {
+                    console.error('Error fetching temperature:', error);
+                    document.getElementById('temperature').innerText = "Loading...";
+                });
+        }
+
+        setInterval(fetchTemperature, 5000); // Refresh every 5 seconds
+        window.onload = fetchTemperature;
+    </script>
+</head>
+<body>
+    <h1>Current Temperature</h1>
+    <p id="temperature">Loading...</p>
+</body>
+</html>
