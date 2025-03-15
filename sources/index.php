@@ -45,6 +45,6 @@
     <h1>Current Temperature</h1>
     <h2 id="temperature">Loading...</h2>
     <p id="counter">Next update in: 5s</p>
-    
+    <p id="visitor"><?php include 'visitor.php'; ?></p>
 </body>
 </html>

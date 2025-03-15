@@ -9,6 +9,7 @@
      $str = file_get_contents(__DIR__ . "/dev_ds18b20.txt");
      if (preg_match('|t=([0-9]+)|mi', $str, $m)) {
          $temp = $m[1] / 1000;
+         echo $temp . " ";
          SaveMeasurement($conn, "28-00000b994082", $temp);
      }
     //----------------------------------
@@ -40,7 +41,6 @@
                 }
 
                 if ($ins) {
-                    echo $temp . " ";
                 // Prepare the SQL query with placeholders
                     $sql = "INSERT INTO temperature (w1_devices_id, temperature) VALUES ('$result[w1_devices_id]','$temp')";
                     if ($conn->query($sql) === TRUE) {
@@ -50,7 +50,6 @@
                     }
 
                 }else {
-                    echo $latest['temperature'] . " ";
                     $sql = "UPDATE temperature SET date_check = NOW() WHERE temperature_id = '$latest[temperature]'";
                     if ($conn->query($sql) === TRUE) {
                       #echo "New record updated successfully";

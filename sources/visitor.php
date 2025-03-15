@@ -29,5 +29,5 @@
 
     file_put_contents($log_file, $log_entry, FILE_APPEND);
 
-    echo " \" " . htmlspecialchars($visitor_ip) . " - " . htmlspecialchars($public_ip) ." \" " ;
+    //echo " \" " . htmlspecialchars($visitor_ip) . " - " . htmlspecialchars($public_ip) ." \" " ;
 ?>

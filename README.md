@@ -39,6 +39,8 @@ The server will then store the temperature in a database and display it on a web
 
 I create MySQL database on my university cloud. You can install MySQL on your local machine and create database.
 
+![Check sensor](./img/2025-03-16_004530.jpg)
+
 **Create table w1_devices:**
 
 |Field	|Description		|
