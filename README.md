@@ -4,8 +4,7 @@
 
 ## Introduction
 This project is a simple example of how to measure temperature remotely using a Raspberry Pi 3 Model B v1.2 and a DS18B20 temperature sensor. 
-The Raspberry Pi will read the temperature from the sensor and send it to a remote server using a POST request. 
-The server will then store the temperature in a database and display it on a webpage.
+The Raspberry Pi will read the temperature from the sensor and send it to a remote server. The server will then store the temperature in a database and display it on a webpage.
 ## Requirements
 - Raspberry Pi 3 Model B v1.2
 - DS18B20 temperature sensor
