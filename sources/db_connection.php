@@ -1,8 +1,8 @@
 <?php
 $servername = "mariadb.vamk.fi"; // Database server
-$username = "e2301482"; // Database username
-$password = "YhFdRbzjNj8"; // Database password
-$dbname = "e2301482_embeddedLinux"; // Database name
+$username = ""; // Database username
+$password = ""; // Database password
+$dbname = ""; // Database name
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

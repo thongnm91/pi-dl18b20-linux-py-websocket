@@ -3,8 +3,8 @@ import paramiko
 # SFTP Server details
 host = "shell.vamk.fi"
 port = 22  # Default SFTP port
-username = "e2301482"
-password = "lyqIas8"
+username = ""
+password = ""
 
 # Local and remote file paths
 local_file = "/sys/bus/w1/devices/28-00000b994082/w1_slave"
