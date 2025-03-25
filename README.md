@@ -1,6 +1,6 @@
 ﻿# IoT Realtime Temperature
 
-### Demo: https://www.cc.puv.fi/~e2301482/projectEmbeddedLinux/index.php
+### Demo: [www.cc.puv.fi/~e2301482](https://www.cc.puv.fi/~e2301482/projectEmbeddedLinux/index.php)
 
 ## Introduction
 - This project is a simple example of how to measure temperature remotely using a Raspberry Pi 3 Model B v1.2 and a DS18B20 temperature sensor. 
